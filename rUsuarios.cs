@@ -22,49 +22,49 @@ namespace ProyectoNuevoRegistro
 
         private void Limpiar()
         {
-            idNumericUpDown1.Value = 0;
-            textBoxNombres.Text = string.Empty;
-            textBoxAlias .Text = string.Empty;
-            textBoxClaveConfirm.Text = string.Empty;
-            textBoxEmail.Text = string.Empty;
+            IDNumericUpDown1.Value = 0;
+            NombresTextBox.Text = string.Empty;
+            AliasTextBox .Text = string.Empty;
+            ClaveConfirmTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
             errorProvider1.Clear();
-            dateTimePicker1.CustomFormat = " ";
-            textBoxClave.Clear();
-            checkBoxActivo.Checked = false;
-            comboBoxRol.Text = "Seleccionar";
+            FechaDateTimePicker.CustomFormat = " ";
+            ClaveTextBox.Clear();
+            ActivoCheckBox.Checked = false;
+            RolComboBox.Text = "Seleccionar";
         }
 
         private void LlenaCampo(Usuarios usuarios)
         {
-            idNumericUpDown1.Value = usuarios.UsuarioId; 
-            textBoxNombres.Text = usuarios.Nombres;
-            textBoxEmail.Text = usuarios.Email;
-            textBoxAlias.Text = usuarios.Alias;
-            comboBoxRol.Text = usuarios.DescripcionRol;
-            textBoxClave.Text = usuarios.Clave;
-            dateTimePicker1.Value = usuarios.FechaIngreso;
-            checkBoxActivo.Checked = usuarios.Activo;
-            textBoxClaveConfirm.Text = usuarios.Clave;
+            IDNumericUpDown1.Value = usuarios.UsuarioId; 
+            NombresTextBox.Text = usuarios.Nombres;
+            EmailTextBox.Text = usuarios.Email;
+            AliasTextBox.Text = usuarios.Alias;
+            RolComboBox.Text = usuarios.DescripcionRol;
+            ClaveTextBox.Text = usuarios.Clave;
+            FechaDateTimePicker.Value = usuarios.FechaIngreso;
+            ActivoCheckBox.Checked = usuarios.Activo;
+            ClaveConfirmTextBox.Text = usuarios.Clave;
         }
 
         private Usuarios LlenaClase()
         {
             Usuarios usuarios = new Usuarios();
-            usuarios.UsuarioId = (int)idNumericUpDown1.Value;
-            usuarios.Clave = textBoxClave.Text;
-            usuarios.Email = textBoxEmail.Text;
-            usuarios.Nombres = textBoxNombres.Text;           
-            usuarios.FechaIngreso = dateTimePicker1.Value;
-            usuarios.Alias = textBoxAlias.Text;
-            usuarios.DescripcionRol = comboBoxRol.Text;
-            usuarios.Activo = checkBoxActivo.Checked;
+            usuarios.UsuarioId = (int)IDNumericUpDown1.Value;
+            usuarios.Clave = ClaveTextBox.Text;
+            usuarios.Email = EmailTextBox.Text;
+            usuarios.Nombres = NombresTextBox.Text;           
+            usuarios.FechaIngreso = FechaDateTimePicker.Value;
+            usuarios.Alias = AliasTextBox.Text;
+            usuarios.DescripcionRol = RolComboBox.Text;
+            usuarios.Activo = ActivoCheckBox.Checked;
 
             return usuarios;
         }
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            Usuarios usuarios = UsuariosBLL.Buscar((int)idNumericUpDown1.Value);
+            Usuarios usuarios = UsuariosBLL.Buscar((int)IDNumericUpDown1.Value);
 
             return (usuarios != null);
         }
@@ -84,7 +84,7 @@ namespace ProyectoNuevoRegistro
 
             usuarios = LlenaClase();
 
-            if (!(UsuariosBLL.Existe((int)idNumericUpDown1.Value)))
+            if (!(UsuariosBLL.Existe((int)IDNumericUpDown1.Value)))
             {
                 if (!ExisteEnLaBaseDeDatos())
                     paso = UsuariosBLL.Guardar(usuarios);
@@ -110,50 +110,50 @@ namespace ProyectoNuevoRegistro
         {
             bool paso = true;
 
-            if (textBoxNombres.Text == string.Empty)
+            if (NombresTextBox.Text == string.Empty)
             {
-                errorProvider1.SetError(textBoxNombres, "El campo nombre no puede estar vacio");
-                textBoxNombres.Focus();
+                errorProvider1.SetError(NombresTextBox, "El campo nombre no puede estar vacio");
+                NombresTextBox.Focus();
                 paso = false;
             }
 
-            if (string.IsNullOrWhiteSpace(textBoxEmail.Text))
+            if (string.IsNullOrWhiteSpace(EmailTextBox.Text))
             {
-                errorProvider1.SetError(textBoxEmail, "El Email no puede estar vacio");
-                textBoxEmail.Focus();
+                errorProvider1.SetError(EmailTextBox, "El Email no puede estar vacio");
+                EmailTextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(textBoxAlias.Text))
+            if (string.IsNullOrWhiteSpace(AliasTextBox.Text))
             {
-                errorProvider1.SetError(textBoxAlias, "El campo Alias no puede estar vacio");
-                textBoxAlias.Focus();
+                errorProvider1.SetError(AliasTextBox, "El campo Alias no puede estar vacio");
+                AliasTextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(comboBoxRol.Text))
+            if (string.IsNullOrWhiteSpace(RolComboBox.Text))
             {
-                errorProvider1.SetError(comboBoxRol, "Debe agregar un rol especifico");
-                comboBoxRol.Focus();
+                errorProvider1.SetError(RolComboBox, "Debe agregar un rol especifico");
+                RolComboBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(textBoxClave.Text))
+            if (string.IsNullOrWhiteSpace(ClaveTextBox.Text))
             {
-                errorProvider1.SetError(textBoxClave, "Debe asignar una clave a su usuario");
-                textBoxClave.Focus();
+                errorProvider1.SetError(ClaveTextBox, "Debe asignar una clave a su usuario");
+                ClaveTextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(textBoxClaveConfirm.Text))
+            if (string.IsNullOrWhiteSpace(ClaveConfirmTextBox.Text))
             {
-                errorProvider1.SetError(textBoxClaveConfirm, "Debe confirmar la clave");
-                textBoxClaveConfirm.Focus();
+                errorProvider1.SetError(ClaveConfirmTextBox, "Debe confirmar la clave");
+                ClaveConfirmTextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(dateTimePicker1.Text))
+            if (string.IsNullOrWhiteSpace(FechaDateTimePicker.Text))
             {
-                errorProvider1.SetError(dateTimePicker1, "Debe agregar una fecha de registro");
-                dateTimePicker1.Focus();
+                errorProvider1.SetError(FechaDateTimePicker, "Debe agregar una fecha de registro");
+                FechaDateTimePicker.Focus();
                 paso = false;
             }
-            if(textBoxClave.Text != textBoxClaveConfirm.Text && textBoxClaveConfirm.Text != textBoxClave.Text)
+            if(ClaveTextBox.Text != ClaveConfirmTextBox.Text && ClaveConfirmTextBox.Text != ClaveTextBox.Text)
             {
                 MessageBox.Show("La contraseña debe ser igual para ambos casos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 paso = false;
@@ -170,7 +170,7 @@ namespace ProyectoNuevoRegistro
                 return;
             usuarios = LlenaClase();
 
-            if ((int)idNumericUpDown1.Value == 0)
+            if ((int)IDNumericUpDown1.Value == 0)
                 paso = UsuariosBLL.Guardar(usuarios);
             else
             {
@@ -211,26 +211,26 @@ namespace ProyectoNuevoRegistro
             errorProvider1.Clear();
 
             int id;
-            int.TryParse(idNumericUpDown1.Text, out id);
+            int.TryParse(IDNumericUpDown1.Text, out id);
 
             Limpiar();
 
             if (UsuariosBLL.Eliminar(id))
                 MessageBox.Show("Eliminado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                errorProvider1.SetError(idNumericUpDown1, "No se puede eliminar una persona que no existe");
+                errorProvider1.SetError(IDNumericUpDown1, "No se puede eliminar una persona que no existe");
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            dateTimePicker1.CustomFormat = "dd / MM / yyyy";
+            FechaDateTimePicker.CustomFormat = "dd / MM / yyyy";
         }
 
         private void Buscar_Click(object sender, EventArgs e)
         {
             int id;
             Usuarios usuario = new Usuarios();
-            int.TryParse(idNumericUpDown1.Text, out id);
+            int.TryParse(IDNumericUpDown1.Text, out id);
 
             Limpiar();
 
@@ -249,12 +249,12 @@ namespace ProyectoNuevoRegistro
 
         private void textBoxClave_TextChanged(object sender, EventArgs e)
         {
-            textBoxClave.PasswordChar = '*';
+            ClaveTextBox.PasswordChar = '*';
         }
 
         private void textBoxClaveConfirm_TextChanged(object sender, EventArgs e)
         {
-            textBoxClaveConfirm.PasswordChar = '*';
+            ClaveConfirmTextBox.PasswordChar = '*';
         }
     }
 }

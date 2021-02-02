@@ -31,7 +31,7 @@ namespace ProyectoNuevoRegistro
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rUsuarios));
-            this.Nuevo = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
             this.Guardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,36 +39,36 @@ namespace ProyectoNuevoRegistro
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBoxActivo = new System.Windows.Forms.CheckBox();
-            this.textBoxAlias = new System.Windows.Forms.TextBox();
-            this.textBoxNombres = new System.Windows.Forms.TextBox();
-            this.textBoxClave = new System.Windows.Forms.TextBox();
-            this.Buscar = new System.Windows.Forms.Button();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.comboBoxRol = new System.Windows.Forms.ComboBox();
-            this.Eliminar = new System.Windows.Forms.Button();
+            this.ActivoCheckBox = new System.Windows.Forms.CheckBox();
+            this.AliasTextBox = new System.Windows.Forms.TextBox();
+            this.NombresTextBox = new System.Windows.Forms.TextBox();
+            this.ClaveTextBox = new System.Windows.Forms.TextBox();
+            this.BuscarButton = new System.Windows.Forms.Button();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.RolComboBox = new System.Windows.Forms.ComboBox();
+            this.EliminarButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxClaveConfirm = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ClaveConfirmTextBox = new System.Windows.Forms.TextBox();
+            this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.idNumericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.IDNumericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idNumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IDNumericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Nuevo
+            // NuevoButton
             // 
-            this.Nuevo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo.Image")));
-            this.Nuevo.Location = new System.Drawing.Point(127, 222);
-            this.Nuevo.Name = "Nuevo";
-            this.Nuevo.Size = new System.Drawing.Size(118, 68);
-            this.Nuevo.TabIndex = 0;
-            this.Nuevo.Text = "Nuevo";
-            this.Nuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Nuevo.UseVisualStyleBackColor = false;
-            this.Nuevo.Click += new System.EventHandler(this.Nuevo_Click);
+            this.NuevoButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
+            this.NuevoButton.Location = new System.Drawing.Point(127, 222);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(118, 68);
+            this.NuevoButton.TabIndex = 0;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NuevoButton.UseVisualStyleBackColor = false;
+            this.NuevoButton.Click += new System.EventHandler(this.Nuevo_Click);
             // 
             // Guardar
             // 
@@ -137,85 +137,85 @@ namespace ProyectoNuevoRegistro
             this.label6.TabIndex = 8;
             this.label6.Text = "Roll";
             // 
-            // checkBoxActivo
+            // ActivoCheckBox
             // 
-            this.checkBoxActivo.AutoSize = true;
-            this.checkBoxActivo.Location = new System.Drawing.Point(628, 22);
-            this.checkBoxActivo.Name = "checkBoxActivo";
-            this.checkBoxActivo.Size = new System.Drawing.Size(73, 24);
-            this.checkBoxActivo.TabIndex = 9;
-            this.checkBoxActivo.Text = "Activo";
-            this.checkBoxActivo.UseVisualStyleBackColor = true;
+            this.ActivoCheckBox.AutoSize = true;
+            this.ActivoCheckBox.Location = new System.Drawing.Point(628, 22);
+            this.ActivoCheckBox.Name = "ActivoCheckBox";
+            this.ActivoCheckBox.Size = new System.Drawing.Size(73, 24);
+            this.ActivoCheckBox.TabIndex = 9;
+            this.ActivoCheckBox.Text = "Activo";
+            this.ActivoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // textBoxAlias
+            // AliasTextBox
             // 
-            this.textBoxAlias.Location = new System.Drawing.Point(110, 60);
-            this.textBoxAlias.Name = "textBoxAlias";
-            this.textBoxAlias.Size = new System.Drawing.Size(153, 27);
-            this.textBoxAlias.TabIndex = 11;
+            this.AliasTextBox.Location = new System.Drawing.Point(110, 56);
+            this.AliasTextBox.Name = "AliasTextBox";
+            this.AliasTextBox.Size = new System.Drawing.Size(153, 27);
+            this.AliasTextBox.TabIndex = 11;
             // 
-            // textBoxNombres
+            // NombresTextBox
             // 
-            this.textBoxNombres.Location = new System.Drawing.Point(110, 100);
-            this.textBoxNombres.Name = "textBoxNombres";
-            this.textBoxNombres.Size = new System.Drawing.Size(257, 27);
-            this.textBoxNombres.TabIndex = 12;
+            this.NombresTextBox.Location = new System.Drawing.Point(110, 100);
+            this.NombresTextBox.Name = "NombresTextBox";
+            this.NombresTextBox.Size = new System.Drawing.Size(257, 27);
+            this.NombresTextBox.TabIndex = 12;
             // 
-            // textBoxClave
+            // ClaveTextBox
             // 
-            this.textBoxClave.Location = new System.Drawing.Point(110, 142);
-            this.textBoxClave.Name = "textBoxClave";
-            this.textBoxClave.Size = new System.Drawing.Size(146, 27);
-            this.textBoxClave.TabIndex = 13;
-            this.textBoxClave.TextChanged += new System.EventHandler(this.textBoxClave_TextChanged);
+            this.ClaveTextBox.Location = new System.Drawing.Point(110, 145);
+            this.ClaveTextBox.Name = "ClaveTextBox";
+            this.ClaveTextBox.Size = new System.Drawing.Size(146, 27);
+            this.ClaveTextBox.TabIndex = 13;
+            this.ClaveTextBox.TextChanged += new System.EventHandler(this.textBoxClave_TextChanged);
             // 
-            // Buscar
+            // BuscarButton
             // 
-            this.Buscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Buscar.Image = ((System.Drawing.Image)(resources.GetObject("Buscar.Image")));
-            this.Buscar.Location = new System.Drawing.Point(168, 20);
-            this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(34, 27);
-            this.Buscar.TabIndex = 14;
-            this.Buscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Buscar.UseVisualStyleBackColor = false;
-            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
+            this.BuscarButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
+            this.BuscarButton.Location = new System.Drawing.Point(168, 20);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(34, 27);
+            this.BuscarButton.TabIndex = 14;
+            this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BuscarButton.UseVisualStyleBackColor = false;
+            this.BuscarButton.Click += new System.EventHandler(this.Buscar_Click);
             // 
-            // textBoxEmail
+            // EmailTextBox
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(416, 100);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(313, 27);
-            this.textBoxEmail.TabIndex = 15;
+            this.EmailTextBox.Location = new System.Drawing.Point(416, 100);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(313, 27);
+            this.EmailTextBox.TabIndex = 15;
             // 
-            // comboBoxRol
+            // RolComboBox
             // 
-            this.comboBoxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxRol.FormattingEnabled = true;
-            this.comboBoxRol.Items.AddRange(new object[] {
+            this.RolComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RolComboBox.FormattingEnabled = true;
+            this.RolComboBox.Items.AddRange(new object[] {
             "Adiministrador",
             "Estudiante",
             "Maestro",
             "Ciudadano",
             "Conserje",
             "Pasante"});
-            this.comboBoxRol.Location = new System.Drawing.Point(594, 60);
-            this.comboBoxRol.Name = "comboBoxRol";
-            this.comboBoxRol.Size = new System.Drawing.Size(135, 28);
-            this.comboBoxRol.TabIndex = 16;
+            this.RolComboBox.Location = new System.Drawing.Point(594, 60);
+            this.RolComboBox.Name = "RolComboBox";
+            this.RolComboBox.Size = new System.Drawing.Size(135, 28);
+            this.RolComboBox.TabIndex = 16;
             // 
-            // Eliminar
+            // EliminarButton
             // 
-            this.Eliminar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.Location = new System.Drawing.Point(459, 222);
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.Size = new System.Drawing.Size(118, 68);
-            this.Eliminar.TabIndex = 17;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Eliminar.UseVisualStyleBackColor = false;
-            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
+            this.EliminarButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
+            this.EliminarButton.Location = new System.Drawing.Point(459, 222);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(118, 68);
+            this.EliminarButton.TabIndex = 17;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.EliminarButton.UseVisualStyleBackColor = false;
+            this.EliminarButton.Click += new System.EventHandler(this.Eliminar_Click);
             // 
             // label7
             // 
@@ -226,23 +226,23 @@ namespace ProyectoNuevoRegistro
             this.label7.TabIndex = 18;
             this.label7.Text = "Confirmar Clave";
             // 
-            // textBoxClaveConfirm
+            // ClaveConfirmTextBox
             // 
-            this.textBoxClaveConfirm.Location = new System.Drawing.Point(416, 142);
-            this.textBoxClaveConfirm.Name = "textBoxClaveConfirm";
-            this.textBoxClaveConfirm.Size = new System.Drawing.Size(172, 27);
-            this.textBoxClaveConfirm.TabIndex = 19;
-            this.textBoxClaveConfirm.TextChanged += new System.EventHandler(this.textBoxClaveConfirm_TextChanged);
+            this.ClaveConfirmTextBox.Location = new System.Drawing.Point(416, 142);
+            this.ClaveConfirmTextBox.Name = "ClaveConfirmTextBox";
+            this.ClaveConfirmTextBox.Size = new System.Drawing.Size(172, 27);
+            this.ClaveConfirmTextBox.TabIndex = 19;
+            this.ClaveConfirmTextBox.TextChanged += new System.EventHandler(this.textBoxClaveConfirm_TextChanged);
             // 
-            // dateTimePicker1
+            // FechaDateTimePicker
             // 
-            this.dateTimePicker1.CustomFormat = " ";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(416, 63);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(146, 27);
-            this.dateTimePicker1.TabIndex = 20;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.FechaDateTimePicker.CustomFormat = " ";
+            this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(416, 61);
+            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(146, 27);
+            this.FechaDateTimePicker.TabIndex = 20;
+            this.FechaDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label8
             // 
@@ -257,32 +257,32 @@ namespace ProyectoNuevoRegistro
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // idNumericUpDown1
+            // IDNumericUpDown1
             // 
-            this.idNumericUpDown1.Location = new System.Drawing.Point(110, 21);
-            this.idNumericUpDown1.Name = "idNumericUpDown1";
-            this.idNumericUpDown1.Size = new System.Drawing.Size(52, 27);
-            this.idNumericUpDown1.TabIndex = 22;
+            this.IDNumericUpDown1.Location = new System.Drawing.Point(110, 21);
+            this.IDNumericUpDown1.Name = "IDNumericUpDown1";
+            this.IDNumericUpDown1.Size = new System.Drawing.Size(52, 27);
+            this.IDNumericUpDown1.TabIndex = 22;
             // 
-            // RegistroUsuario
+            // rUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(744, 311);
-            this.Controls.Add(this.idNumericUpDown1);
+            this.Controls.Add(this.IDNumericUpDown1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBoxClaveConfirm);
+            this.Controls.Add(this.FechaDateTimePicker);
+            this.Controls.Add(this.ClaveConfirmTextBox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.Eliminar);
-            this.Controls.Add(this.comboBoxRol);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.Buscar);
-            this.Controls.Add(this.textBoxClave);
-            this.Controls.Add(this.textBoxNombres);
-            this.Controls.Add(this.textBoxAlias);
-            this.Controls.Add(this.checkBoxActivo);
+            this.Controls.Add(this.EliminarButton);
+            this.Controls.Add(this.RolComboBox);
+            this.Controls.Add(this.EmailTextBox);
+            this.Controls.Add(this.BuscarButton);
+            this.Controls.Add(this.ClaveTextBox);
+            this.Controls.Add(this.NombresTextBox);
+            this.Controls.Add(this.AliasTextBox);
+            this.Controls.Add(this.ActivoCheckBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -290,12 +290,12 @@ namespace ProyectoNuevoRegistro
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Guardar);
-            this.Controls.Add(this.Nuevo);
+            this.Controls.Add(this.NuevoButton);
             this.MaximizeBox = false;
-            this.Name = "RegistroUsuario";
+            this.Name = "rUsuarios";
             this.Text = "Registro";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idNumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IDNumericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,7 +303,7 @@ namespace ProyectoNuevoRegistro
 
         #endregion
 
-        private System.Windows.Forms.Button Nuevo;
+        private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -311,20 +311,20 @@ namespace ProyectoNuevoRegistro
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.CheckBox checkBoxActivo;
-        private System.Windows.Forms.TextBox textBoxAlias;
-        private System.Windows.Forms.TextBox textBoxNombres;
-        private System.Windows.Forms.TextBox textBoxClave;
-        private System.Windows.Forms.Button Buscar;
-        private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.ComboBox comboBoxRol;
-        private System.Windows.Forms.Button Eliminar;
+        private System.Windows.Forms.CheckBox ActivoCheckBox;
+        private System.Windows.Forms.TextBox AliasTextBox;
+        private System.Windows.Forms.TextBox NombresTextBox;
+        private System.Windows.Forms.TextBox ClaveTextBox;
+        private System.Windows.Forms.Button BuscarButton;
+        private System.Windows.Forms.TextBox EmailTextBox;
+        private System.Windows.Forms.ComboBox RolComboBox;
+        private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxClaveConfirm;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox ClaveConfirmTextBox;
+        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.NumericUpDown idNumericUpDown1;
+        private System.Windows.Forms.NumericUpDown IDNumericUpDown1;
     }
 }
 
