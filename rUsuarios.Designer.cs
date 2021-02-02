@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoNuevoRegistro
 {
-    partial class Form1
+    partial class rUsuarios
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,10 +30,9 @@ namespace ProyectoNuevoRegistro
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rUsuarios));
             this.Nuevo = new System.Windows.Forms.Button();
             this.Guardar = new System.Windows.Forms.Button();
-            this.Editar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,7 +61,7 @@ namespace ProyectoNuevoRegistro
             // 
             this.Nuevo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo.Image")));
-            this.Nuevo.Location = new System.Drawing.Point(44, 226);
+            this.Nuevo.Location = new System.Drawing.Point(127, 222);
             this.Nuevo.Name = "Nuevo";
             this.Nuevo.Size = new System.Drawing.Size(118, 68);
             this.Nuevo.TabIndex = 0;
@@ -75,7 +74,7 @@ namespace ProyectoNuevoRegistro
             // 
             this.Guardar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Guardar.Image")));
-            this.Guardar.Location = new System.Drawing.Point(214, 226);
+            this.Guardar.Location = new System.Drawing.Point(292, 222);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(118, 68);
             this.Guardar.TabIndex = 1;
@@ -83,19 +82,6 @@ namespace ProyectoNuevoRegistro
             this.Guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Guardar.UseVisualStyleBackColor = false;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
-            // 
-            // Editar
-            // 
-            this.Editar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.Location = new System.Drawing.Point(384, 226);
-            this.Editar.Name = "Editar";
-            this.Editar.Size = new System.Drawing.Size(118, 68);
-            this.Editar.TabIndex = 2;
-            this.Editar.Text = "Editar";
-            this.Editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Editar.UseVisualStyleBackColor = false;
-            this.Editar.Click += new System.EventHandler(this.Editar_Click);
             // 
             // label1
             // 
@@ -222,7 +208,7 @@ namespace ProyectoNuevoRegistro
             // 
             this.Eliminar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.Location = new System.Drawing.Point(554, 226);
+            this.Eliminar.Location = new System.Drawing.Point(459, 222);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(118, 68);
             this.Eliminar.TabIndex = 17;
@@ -278,7 +264,7 @@ namespace ProyectoNuevoRegistro
             this.idNumericUpDown1.Size = new System.Drawing.Size(52, 27);
             this.idNumericUpDown1.TabIndex = 22;
             // 
-            // Form1
+            // RegistroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -303,11 +289,10 @@ namespace ProyectoNuevoRegistro
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Editar);
             this.Controls.Add(this.Guardar);
             this.Controls.Add(this.Nuevo);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "RegistroUsuario";
             this.Text = "Registro";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idNumericUpDown1)).EndInit();
@@ -320,7 +305,6 @@ namespace ProyectoNuevoRegistro
 
         private System.Windows.Forms.Button Nuevo;
         private System.Windows.Forms.Button Guardar;
-        private System.Windows.Forms.Button Editar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
