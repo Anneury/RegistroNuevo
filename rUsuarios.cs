@@ -152,7 +152,7 @@ namespace ProyectoNuevoRegistro
                 FechaDateTimePicker.Focus();
                 paso = false;
             }
-            if(ClaveTextBox.Text != ClaveConfirmTextBox.Text && ClaveConfirmTextBox.Text != ClaveTextBox.Text)
+            if(ClaveTextBox.Text != ClaveConfirmTextBox.Text)
             {
                 MessageBox.Show("La contraseña debe ser igual para ambos casos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 paso = false;
