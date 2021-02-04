@@ -154,7 +154,10 @@ namespace ProyectoNuevoRegistro
             }
             if(ClaveTextBox.Text != ClaveConfirmTextBox.Text)
             {
-                MessageBox.Show("La contraseña debe ser igual para ambos casos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorProvider1.SetError(ClaveConfirmTextBox, "Las contrseñas deben ser iguales.");
+                ClaveConfirmTextBox.Focus();
+                errorProvider1.SetError(ClaveTextBox, "Las contraseñas deben ser iguales.");
+                ClaveTextBox.Focus();
                 paso = false;
             }
             return paso;
