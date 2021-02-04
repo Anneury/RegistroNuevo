@@ -160,6 +160,13 @@ namespace ProyectoNuevoRegistro
                 ClaveTextBox.Focus();
                 paso = false;
             }
+            if (UsuariosBLL.ExisteAlias(AliasTextBox.Text))
+            {
+                errorProvider1.SetError(AliasTextBox, "Los Alias no pueden repetirse!");
+                AliasTextBox.Focus();
+                paso = false;
+            }
+
             return paso;
         }
 

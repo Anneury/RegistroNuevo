@@ -130,6 +130,26 @@ namespace ProyectoNuevoRegistro.BLL
 
             return encontrado;
         }
+        public static bool ExisteAlias(string alias)
+        {
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+
+            try
+            {
+                encontrado = contexto.Usuarios.Any(e => e.Alias == alias);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return encontrado;
+        }
 
         public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> criterio)
         {
