@@ -90,8 +90,7 @@ namespace ProyectoNuevoRegistro
                     paso = UsuariosBLL.Guardar(usuarios);
                 else
                 {
-                    MessageBox.Show("Este usuario ya existe!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    paso = UsuariosBLL.Modificar(usuarios);
                 }
             }
 
@@ -102,7 +101,7 @@ namespace ProyectoNuevoRegistro
             }
             else
             {
-                MessageBox.Show("No se pudo guardar, este usuario ya existe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo guardar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -159,51 +158,6 @@ namespace ProyectoNuevoRegistro
                 paso = false;
             }
             return paso;
-        }
-
-        private void Editar_Click(object sender, EventArgs e)
-        {
-            Usuarios usuarios = new Usuarios();
-            bool paso = false;
-
-            if (!Validar())
-                return;
-            usuarios = LlenaClase();
-
-            if ((int)IDNumericUpDown1.Value == 0)
-                paso = UsuariosBLL.Guardar(usuarios);
-            else
-            {
-                if (!ExisteEnLaBaseDeDatos())
-                {
-                    MessageBox.Show("No se puede modificar... El usuario no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else
-                {
-                    DialogResult result = MessageBox.Show("Desea guardar los cambios?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                    if (result == DialogResult.Yes)
-                    {
-                        Limpiar();
-                    }
-                    else if (result == DialogResult.No)
-                    {
-                        Limpiar();
-
-                        return;
-                    }
-                }
-                paso = UsuariosBLL.Modificar(usuarios);
-            }
-
-            if (paso)
-            {
-                Limpiar();
-                MessageBox.Show("Guardado!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void Eliminar_Click(object sender, EventArgs e)
