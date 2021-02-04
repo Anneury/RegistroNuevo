@@ -203,15 +203,5 @@ namespace ProyectoNuevoRegistro
                 MessageBox.Show("Persona no Encontrada","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
-
-        private void textBoxClave_TextChanged(object sender, EventArgs e)
-        {
-            ClaveTextBox.PasswordChar = '*';
-        }
-
-        private void textBoxClaveConfirm_TextChanged(object sender, EventArgs e)
-        {
-            ClaveConfirmTextBox.PasswordChar = '*';
-        }
     }
 }

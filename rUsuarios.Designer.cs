@@ -165,9 +165,9 @@ namespace ProyectoNuevoRegistro
             // 
             this.ClaveTextBox.Location = new System.Drawing.Point(110, 145);
             this.ClaveTextBox.Name = "ClaveTextBox";
+            this.ClaveTextBox.PasswordChar = '*';
             this.ClaveTextBox.Size = new System.Drawing.Size(146, 27);
             this.ClaveTextBox.TabIndex = 13;
-            this.ClaveTextBox.TextChanged += new System.EventHandler(this.textBoxClave_TextChanged);
             // 
             // BuscarButton
             // 
@@ -230,9 +230,9 @@ namespace ProyectoNuevoRegistro
             // 
             this.ClaveConfirmTextBox.Location = new System.Drawing.Point(416, 142);
             this.ClaveConfirmTextBox.Name = "ClaveConfirmTextBox";
+            this.ClaveConfirmTextBox.PasswordChar = '*';
             this.ClaveConfirmTextBox.Size = new System.Drawing.Size(172, 27);
             this.ClaveConfirmTextBox.TabIndex = 19;
-            this.ClaveConfirmTextBox.TextChanged += new System.EventHandler(this.textBoxClaveConfirm_TextChanged);
             // 
             // FechaDateTimePicker
             // 
