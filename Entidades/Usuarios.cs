@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProyectoNuevoRegistro.Entidades
 {
@@ -16,5 +17,7 @@ namespace ProyectoNuevoRegistro.Entidades
         public string Email { get; set; }
         public string DescripcionRol { get; set; }
         public bool Activo { get; set; }
+        [ForeignKey("RolId")]
+        public virtual Roles roles { get; set; }
     }
 }

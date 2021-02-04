@@ -9,7 +9,7 @@ using ProyectoNuevoRegistro.DAL;
 namespace ProyectoNuevoRegistro.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210130200622_Inicial")]
+    [Migration("20210204210258_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -17,6 +17,20 @@ namespace ProyectoNuevoRegistro.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.2");
+
+            modelBuilder.Entity("ProyectoNuevoRegistro.Entidades.Roles", b =>
+                {
+                    b.Property<int>("RolId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("RolId");
+
+                    b.ToTable("Roles");
+                });
 
             modelBuilder.Entity("ProyectoNuevoRegistro.Entidades.Usuarios", b =>
                 {
@@ -45,9 +59,23 @@ namespace ProyectoNuevoRegistro.Migrations
                     b.Property<string>("Nombres")
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("RolId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("UsuarioId");
 
+                    b.HasIndex("RolId");
+
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("ProyectoNuevoRegistro.Entidades.Usuarios", b =>
+                {
+                    b.HasOne("ProyectoNuevoRegistro.Entidades.Roles", "roles")
+                        .WithMany()
+                        .HasForeignKey("RolId");
+
+                    b.Navigation("roles");
                 });
 #pragma warning restore 612, 618
         }

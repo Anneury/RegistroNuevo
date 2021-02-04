@@ -16,6 +16,20 @@ namespace ProyectoNuevoRegistro.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.2");
 
+            modelBuilder.Entity("ProyectoNuevoRegistro.Entidades.Roles", b =>
+                {
+                    b.Property<int>("RolId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("RolId");
+
+                    b.ToTable("Roles");
+                });
+
             modelBuilder.Entity("ProyectoNuevoRegistro.Entidades.Usuarios", b =>
                 {
                     b.Property<int>("UsuarioId")
@@ -43,9 +57,23 @@ namespace ProyectoNuevoRegistro.Migrations
                     b.Property<string>("Nombres")
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("RolId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("UsuarioId");
 
+                    b.HasIndex("RolId");
+
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("ProyectoNuevoRegistro.Entidades.Usuarios", b =>
+                {
+                    b.HasOne("ProyectoNuevoRegistro.Entidades.Roles", "roles")
+                        .WithMany()
+                        .HasForeignKey("RolId");
+
+                    b.Navigation("roles");
                 });
 #pragma warning restore 612, 618
         }

@@ -61,7 +61,7 @@ namespace ProyectoNuevoRegistro
             // 
             this.NuevoButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
-            this.NuevoButton.Location = new System.Drawing.Point(127, 222);
+            this.NuevoButton.Location = new System.Drawing.Point(150, 217);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(118, 68);
             this.NuevoButton.TabIndex = 0;
@@ -74,7 +74,7 @@ namespace ProyectoNuevoRegistro
             // 
             this.Guardar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Guardar.Image = ((System.Drawing.Image)(resources.GetObject("Guardar.Image")));
-            this.Guardar.Location = new System.Drawing.Point(292, 222);
+            this.Guardar.Location = new System.Drawing.Point(315, 217);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(118, 68);
             this.Guardar.TabIndex = 1;
@@ -113,7 +113,7 @@ namespace ProyectoNuevoRegistro
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 145);
+            this.label4.Location = new System.Drawing.Point(12, 152);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 6;
@@ -122,7 +122,7 @@ namespace ProyectoNuevoRegistro
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(364, 103);
+            this.label5.Location = new System.Drawing.Point(355, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 7;
@@ -133,9 +133,9 @@ namespace ProyectoNuevoRegistro
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(559, 63);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 20);
+            this.label6.Size = new System.Drawing.Size(31, 20);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Roll";
+            this.label6.Text = "Rol";
             // 
             // ActivoCheckBox
             // 
@@ -149,31 +149,31 @@ namespace ProyectoNuevoRegistro
             // 
             // AliasTextBox
             // 
-            this.AliasTextBox.Location = new System.Drawing.Point(110, 56);
+            this.AliasTextBox.Location = new System.Drawing.Point(92, 60);
             this.AliasTextBox.Name = "AliasTextBox";
             this.AliasTextBox.Size = new System.Drawing.Size(153, 27);
             this.AliasTextBox.TabIndex = 11;
             // 
             // NombresTextBox
             // 
-            this.NombresTextBox.Location = new System.Drawing.Point(110, 100);
+            this.NombresTextBox.Location = new System.Drawing.Point(92, 104);
             this.NombresTextBox.Name = "NombresTextBox";
             this.NombresTextBox.Size = new System.Drawing.Size(257, 27);
             this.NombresTextBox.TabIndex = 12;
             // 
             // ClaveTextBox
             // 
-            this.ClaveTextBox.Location = new System.Drawing.Point(110, 145);
+            this.ClaveTextBox.Location = new System.Drawing.Point(92, 152);
             this.ClaveTextBox.Name = "ClaveTextBox";
             this.ClaveTextBox.PasswordChar = '*';
-            this.ClaveTextBox.Size = new System.Drawing.Size(146, 27);
+            this.ClaveTextBox.Size = new System.Drawing.Size(126, 27);
             this.ClaveTextBox.TabIndex = 13;
             // 
             // BuscarButton
             // 
             this.BuscarButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
-            this.BuscarButton.Location = new System.Drawing.Point(168, 20);
+            this.BuscarButton.Location = new System.Drawing.Point(150, 24);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(34, 27);
             this.BuscarButton.TabIndex = 14;
@@ -183,9 +183,9 @@ namespace ProyectoNuevoRegistro
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(416, 100);
+            this.EmailTextBox.Location = new System.Drawing.Point(407, 100);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(313, 27);
+            this.EmailTextBox.Size = new System.Drawing.Size(322, 27);
             this.EmailTextBox.TabIndex = 15;
             // 
             // RolComboBox
@@ -193,12 +193,14 @@ namespace ProyectoNuevoRegistro
             this.RolComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RolComboBox.FormattingEnabled = true;
             this.RolComboBox.Items.AddRange(new object[] {
-            "Adiministrador",
+            "Adiministrador1",
             "Estudiante",
             "Maestro",
             "Ciudadano",
             "Conserje",
-            "Pasante"});
+            "Pasante",
+            "Administrador2",
+            "Mariscal"});
             this.RolComboBox.Location = new System.Drawing.Point(594, 60);
             this.RolComboBox.Name = "RolComboBox";
             this.RolComboBox.Size = new System.Drawing.Size(135, 28);
@@ -208,7 +210,7 @@ namespace ProyectoNuevoRegistro
             // 
             this.EliminarButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
-            this.EliminarButton.Location = new System.Drawing.Point(459, 222);
+            this.EliminarButton.Location = new System.Drawing.Point(482, 217);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(118, 68);
             this.EliminarButton.TabIndex = 17;
@@ -220,7 +222,7 @@ namespace ProyectoNuevoRegistro
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(295, 145);
+            this.label7.Location = new System.Drawing.Point(286, 155);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 20);
             this.label7.TabIndex = 18;
@@ -228,17 +230,17 @@ namespace ProyectoNuevoRegistro
             // 
             // ClaveConfirmTextBox
             // 
-            this.ClaveConfirmTextBox.Location = new System.Drawing.Point(416, 142);
+            this.ClaveConfirmTextBox.Location = new System.Drawing.Point(407, 152);
             this.ClaveConfirmTextBox.Name = "ClaveConfirmTextBox";
             this.ClaveConfirmTextBox.PasswordChar = '*';
-            this.ClaveConfirmTextBox.Size = new System.Drawing.Size(172, 27);
+            this.ClaveConfirmTextBox.Size = new System.Drawing.Size(120, 27);
             this.ClaveConfirmTextBox.TabIndex = 19;
             // 
             // FechaDateTimePicker
             // 
             this.FechaDateTimePicker.CustomFormat = " ";
             this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDateTimePicker.Location = new System.Drawing.Point(416, 61);
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(407, 61);
             this.FechaDateTimePicker.Name = "FechaDateTimePicker";
             this.FechaDateTimePicker.Size = new System.Drawing.Size(146, 27);
             this.FechaDateTimePicker.TabIndex = 20;
@@ -247,7 +249,7 @@ namespace ProyectoNuevoRegistro
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(363, 63);
+            this.label8.Location = new System.Drawing.Point(354, 63);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 20);
             this.label8.TabIndex = 21;
@@ -259,7 +261,7 @@ namespace ProyectoNuevoRegistro
             // 
             // IDNumericUpDown1
             // 
-            this.IDNumericUpDown1.Location = new System.Drawing.Point(110, 21);
+            this.IDNumericUpDown1.Location = new System.Drawing.Point(92, 25);
             this.IDNumericUpDown1.Name = "IDNumericUpDown1";
             this.IDNumericUpDown1.Size = new System.Drawing.Size(52, 27);
             this.IDNumericUpDown1.TabIndex = 22;
