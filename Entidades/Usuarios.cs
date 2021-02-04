@@ -17,7 +17,7 @@ namespace ProyectoNuevoRegistro.Entidades
         public string DescripcionRol { get; set; }
         public bool Activo { get; set; }
 
-        public Usuarios()
+       /* public Usuarios()
         {
             UsuarioId = 0;
             Clave = string.Empty;
@@ -27,6 +27,6 @@ namespace ProyectoNuevoRegistro.Entidades
             Email = string.Empty;
             DescripcionRol = string.Empty;
             Activo = false;
-        }
+        }*/
     }
 }

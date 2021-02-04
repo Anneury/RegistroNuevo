@@ -23,15 +23,15 @@ namespace ProyectoNuevoRegistro
         private void Limpiar()
         {
             IDNumericUpDown1.Value = 0;
-            NombresTextBox.Text = string.Empty;
-            AliasTextBox .Text = string.Empty;
-            ClaveConfirmTextBox.Text = string.Empty;
-            EmailTextBox.Text = string.Empty;
+            NombresTextBox.Clear();
+            AliasTextBox.Clear();
+            ClaveConfirmTextBox.Clear();
+            EmailTextBox.Clear();
             errorProvider1.Clear();
             FechaDateTimePicker.CustomFormat = " ";
             ClaveTextBox.Clear();
             ActivoCheckBox.Checked = false;
-            RolComboBox.Text = "Seleccionar";
+            RolComboBox.Text = " ";
         }
 
         private void LlenaCampo(Usuarios usuarios)
